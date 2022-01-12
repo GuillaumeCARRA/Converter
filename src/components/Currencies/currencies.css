@@ -5,6 +5,7 @@
     font-family: 'Spartan', sans-serif;
     font-size: 1rem;
     color: #bb5432;
+    
 }
 
 .currencies__title {
@@ -12,25 +13,39 @@
     font-weight: 700;
 }
 
+/* I have to put a height or width
+   otherwise it won't know whether something is overflowing
+*/
 .currencies__list {
+    height: 180px;
     list-style-type: none;
     padding: 10px;
     margin: 5px auto;
-   
+    overflow-y: scroll;
+    
     
 }
 
 .currencies__name {
-    border-bottom: 1px solid #bb5432;
+    border-bottom: 1px solid #f1c5b6;
     padding: 10px;
-    font-weight: 300;
+    font-weight: 500;
     cursor: pointer;
 }
-
+ 
 .currencies__name:first-child {
-    border-top: 1px solid #bb5432;
+    border-top: 1px solid #f1c5b6;
+    
 }
+
+.currencies__name:hover {
+    opacity: 1;
+    background-color: #f1c5b6;
+    transition: background-color 0.2s, ease-in-out 1s;
+   
+ }
 
 .currencies__name:last-child {
     border-bottom: none;
 }
+

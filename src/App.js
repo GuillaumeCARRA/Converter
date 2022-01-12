@@ -12,7 +12,7 @@ function App() {
     <div className="App">
         <Header />
         <Currencies currencies={currencie} />
-        <Amount />
+        <Amount amounts={currencie} />
     </div>
   );
 }
