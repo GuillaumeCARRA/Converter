@@ -22,8 +22,7 @@
     padding: 10px;
     margin: 5px auto;
     overflow-y: scroll;
-    
-    
+  
 }
 
 .currencies__name {
@@ -42,10 +41,7 @@
     opacity: 1;
     background-color: #f1c5b6;
     transition: background-color 0.2s, ease-in-out 1s;
-   
  }
 
-.currencies__name:last-child {
-    border-bottom: none;
-}
+
 
