@@ -9,8 +9,7 @@
     font-size: 1rem;
     color: #bb5432;
     height: 230px;
-    overflow-y: scroll;
-    
+    overflow-y: scroll;  
 }
 
 .currencies__title {
