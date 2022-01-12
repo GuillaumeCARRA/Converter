@@ -1,3 +1,6 @@
+/* I have to put a height or width
+   otherwise it won't know whether something is overflowing
+*/
 .currencies {
     background-color: #fff;
     width: 370px;
@@ -5,6 +8,8 @@
     font-family: 'Spartan', sans-serif;
     font-size: 1rem;
     color: #bb5432;
+    height: 230px;
+    overflow-y: scroll;
     
 }
 
@@ -13,16 +18,11 @@
     font-weight: 700;
 }
 
-/* I have to put a height or width
-   otherwise it won't know whether something is overflowing
-*/
+
 .currencies__list {
-    height: 180px;
     list-style-type: none;
-    padding: 10px;
-    margin: 5px auto;
-    overflow-y: scroll;
-  
+    padding: 0; 
+    margin: 15px 0; 
 }
 
 .currencies__name {
