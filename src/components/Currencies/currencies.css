@@ -1,0 +1,30 @@
+.currencies {
+    background-color: #fff;
+    width: 370px;
+    padding: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1rem;
+    color: #bb5432;
+}
+
+.currencies__title {
+    margin: 5px 15px;
+    font-weight: 700;
+}
+
+.currencies__list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px auto;
+    
+}
+
+.currencies__name {
+    border-bottom: 1px solid #bb5432;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.currencies__name:first-child {
+    border-top: 1px solid #bb5432;
+}

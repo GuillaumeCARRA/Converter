@@ -4,15 +4,13 @@
     width: 60%;
     color: #fff; 
     padding: 15px;
-    
+    font-family: 'Spartan', sans-serif;
 }
 
 .converter__title{
-  font-family: 'Spartan', sans-serif;
   font-weight: 700;
 }
 
 .converter__amount {
-  font-family: 'Spartan', sans-serif;
   font-weight: 300;
 }
