@@ -28,3 +28,7 @@
 .currencies__name:first-child {
     border-top: 1px solid #bb5432;
 }
+
+.currencies__name:last-child {
+    border-bottom: none;
+}
