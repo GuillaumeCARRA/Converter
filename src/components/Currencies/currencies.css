@@ -39,7 +39,7 @@
 .currencies__name:hover {
     opacity: 1;
     background-color: #f1c5b6;
-    transition: background-color 0.2s, ease-in-out 1s;
+    transition: background-color 0.2s, ease 1s;
  }
 
 

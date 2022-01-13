@@ -1,7 +1,7 @@
 import React from 'react';
 import './currencies.css'
 
-function Currencies({currencies}) {
+function Currencies({currencies, onCurrencieClick}) {
     return (
         <div className="currencies">
             <h2 className="currencies__title">Currencies</h2>
@@ -9,7 +9,16 @@ function Currencies({currencies}) {
                {currencies.map(({
                    name
                }) => (
-                <li key={name} className="currencies__name">
+                <li 
+                    key={name} 
+                    className="currencies__name"
+                    onClick={() => {
+                        const clickedCurrencie = name
+                        console.log('cliqué', clickedCurrencie);
+                        onCurrencieClick(clickedCurrencie)
+                    }}
+                    
+                >
                     {name}
                 </li>
                ))}
