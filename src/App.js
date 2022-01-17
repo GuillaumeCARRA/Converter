@@ -21,7 +21,7 @@ function App() {
   console.log('la bse de la devise', basicAmount);
 
   // FOR SELECT THE RATES WE WANT
-  const [rates, setRate] = useState();
+  const [rates, setRate] = useState({});
   console.log('rate -->', rates);
 
   
