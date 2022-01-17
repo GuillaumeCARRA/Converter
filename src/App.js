@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from '../src/components/Header';
 import Currencies from '../src/components/Currencies';
 import Amount from '../src/components/Amount'; 
@@ -11,15 +11,21 @@ function App() {
 
   // FOR OPEN AND CLOSE THE LIST OF CURRENCIES
   const [openCurrencies, setOpenCurrencies] = useState(true)
+
  
   // FOR SELECT THE CURRENCY THAT WE WANT
-  const [currencies, setCurrenciesNames] = useState('United State Dollars')
-  console.log(currencies);
-
+  const [currencies, setCurrenciesNames] = useState('United States Dollar')
+  console.log('state currencies', currencies);
+ 
   // to change the value of the currency
-  const [basicAmount, setBaseAmout]= useState(2); 
+  const [basicAmount, setBaseAmount]= useState(4); 
   console.log('la bse de la devise', basicAmount);
+
+  const [rates, setRate] = useState({});
+  console.log('rate -->', rates);
+
   
+
   
   /* FOR OPEN AND CLOSE THE LIST OF CURRENCIES */
   const handleOpen = () => {
@@ -32,15 +38,69 @@ function App() {
     setCurrenciesNames(currencies); 
   }
 
+  
 
+ 
  
   // change la valeur de la devise exemple 1 = 1.09 ou 3 = 3.28 US Dollars
   /* FOR CHANGE THE RATE OF THE CURRENCY */
-  const handleAmount = (basicAmount) => {
+  const HandleAmount = () => {
     
-    setCurrenciesNames(basicAmount)
+    // console.log(amounts);
+    // const test = setBaseAmout(currencie.find(
+    //   (curr) => curr.name === currencies 
+    // ))
+
+    // const result = basicAmount * test
+
+    // return result.
+
+    // setRate(basicAmount * rate / rate)
+
+    // setBaseAmount(2 * setRate(rate / rate))
+
+    // const test = setBaseAmount(setRate(currencie.find(
+    //   curr => curr.name === currencies
+    // )))
+
+    // console.log(test);
+
+    // const result = basicAmount * test
+
+    // console.log('testinho', result);
+    // return result;
+
+    
+
+  
+    const curr = currencie.find((curren) => curren.name === currencies); 
+    console.log('recup',curr);
+    
+    const result = rates ? basicAmount * curr?.rate : setRate(basicAmount * curr?.rate)
+    console.log('result', result);
+    
+    // useEffect(() => {
+    //   console.log('le rate change');
+    //   const curr = currencie.find((curren) => curren.name === currencies); 
+    //   function init() {
+    //      if(rate) {
+    //         basicAmount * currencies.rate 
+    //     } else {
+    //       setRate(basicAmount * curr.rate)
+    //     }
+    //   }
+    //  init()
+      
+    // }, [])
+    
+
+    return result; 
+
+
 
   }
+
+ 
 
   return (
     <div className="App">
@@ -52,8 +112,8 @@ function App() {
         >
           =
         </button>
-        {openCurrencies && <Currencies  changeCurrencyName={currencie} onCurrencieClick={changeCurrenciesNames} currencies={currencie} />}
-        <Amount amounts={1.04} currenciesNames={currencies}  />
+        {openCurrencies && <Currencies onCurrencieClick={changeCurrenciesNames} currencies={currencie} />}
+        <Amount rate={HandleAmount()} currenciesNames={currencies}  />
     </div>
   );
 }
