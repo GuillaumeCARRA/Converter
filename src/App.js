@@ -17,7 +17,7 @@ function App() {
   console.log('state currencies', currencies);
  
   // CHANGE THE VALUE OF THE CURRENT CURRENCY
-  const [basicAmount, setBaseAmount]= useState(4); 
+  const [basicAmount, setBaseAmount]= useState(10); 
   console.log('la bse de la devise', basicAmount);
 
   // FOR SELECT THE RATES WE WANT
@@ -45,7 +45,7 @@ function App() {
     const result = rates ? basicAmount * curr?.rate : setRate(basicAmount * curr?.rate);
     console.log('result', result);
 
-    return result; 
+    return result.toFixed(2); 
 
   }
 
