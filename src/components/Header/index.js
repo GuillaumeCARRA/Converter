@@ -10,7 +10,6 @@ function Header({basicAmount, onChangeAmount,}) {
             <input 
                 type="number" 
                 min="0"
-                placeholder='Enter a number'
                 className="header__input"
                 value={basicAmount}
                 onChange= {(event) => {
