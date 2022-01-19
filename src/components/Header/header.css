@@ -14,3 +14,27 @@
 .converter__amount {
   font-weight: 300;
 }
+
+.input__container {
+  position: relative;
+  
+}
+
+.header__input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-family: 'Spartan', sans-serif;
+  outline-style: none;
+  border: 1px solid #bb5432;
+  border-radius: 8px;
+  color: #bb5432; 
+  font-weight: 700;
+}
+
+.currency__symbol {
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  color: #bb5432;
+}

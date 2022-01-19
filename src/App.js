@@ -17,7 +17,7 @@ function App() {
   console.log('state currencies', currencies);
  
   // CHANGE THE VALUE OF THE CURRENT CURRENCY
-  const [basicAmount, setBasicAmount]= useState(100); 
+  const [basicAmount, setBasicAmount]= useState(1); 
   console.log('la bse de la devise', basicAmount);
 
   // FOR SELECT THE RATES WE WANT
@@ -49,11 +49,25 @@ function App() {
 
   }
 
+  /* FOR CHANGE THE VALUE OF THE AMOUNT */
+  const handleValue = (newValue) => {
+    setBasicAmount(newValue); 
+  }
+
+  /* FOR CHANGE THE TITLE OF THE PAGE */
+  const changeTitle = () => {
+    document.title = `Convertissseur: Euros vers ${currencies}`;
+  }
+  changeTitle();
+
+ 
+  
+
 
 
   return (
     <div className="App">
-        <Header basicAmount={basicAmount} />
+        <Header basicAmount={basicAmount} onChangeAmount={handleValue} />
         <button
           className="button"
           type="button"
