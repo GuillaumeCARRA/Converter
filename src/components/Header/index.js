@@ -9,12 +9,13 @@ function Header({basicAmount, onChangeAmount,}) {
         <div className="input__container">
             <input 
                 type="number" 
+                min="0"
                 placeholder='Enter a number'
                 className="header__input"
                 value={basicAmount}
                 onChange= {(event) => {
                     // console.log('event', event.target.value);
-                    onChangeAmount(event.target.value);
+                  onChangeAmount(event.target.value);
                 }}
             />
             <span className="currency__symbol">€</span>
